@@ -1,0 +1,225 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Background */
+  body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Prevent horizontal scroll */
+    scroll-behavior: smooth;
+  }
+  
+  /* CSS Variables */
+  :root {
+    --colorOne: rgb(255, 215, 0);
+  }
+  
+  /* Header */
+  header {
+    width: 100%;
+    background-image: url(photos/giphyTWo.webp);
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  /* Icon Styles */
+  #icon {
+    font-size: 20px;
+  }
+  .hand{
+    font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  /* font-size: 50px; */
+  }
+  .hand1{
+    font-family: "Bungee Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .hand3{
+    font-family: "Zilla Slab", serif;
+  font-weight: 200;
+  font-style: normal;
+  }
+  .card-text{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  /* Row and Container */
+  .row {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+  }
+  
+  .container {
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.1s;
+  }
+  .container:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.344);
+  }
+  /* Image Container (Circular Image with Animation) */
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(black, white, black, white);
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+  
+    .round-image {
+        width: 85%;
+        height: 85%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-container {
+        display: none;
+        width: 100px;
+        height: 100px;
+    }
+  
+    .round-image {
+        width: 80%;
+        height: 80%;
+    }
+  }
+  
+  /* Round Image with Hover Animation */
+  .round-image {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate on Hover */
+  /* .image-container:hover .round-image {
+    animation: rotateImage 2s linear infinite;
+  }
+  
+  @keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+   */
+  /* Technology Section */
+  .tech {
+    padding: 20px;
+  }
+  
+  span{
+    background-color: #4b4a4a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+  transition: 0.5s;
+  }
+  span:hover{
+    background-color: #888686;
+    color: black;
+  }
+  
+  /* Card Styles */
+  .card {
+    margin: 20px;
+    background-color: #4b4a4a;
+  }
+  
+  .card a i{
+    background-color: #4b4a4a;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Flexbox for Centering Cards */
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+  }
+  
+  .card {
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.44);
+    margin: 10px;
+    transition: 0.1s;
+  }
+  .card:hover{
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.911);
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+        flex: 1 0 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+        flex: 1 0 90%;
+    }
+  }
+  /* footer */
+  footer{
+    text-align: center; 
+    padding: 20px; 
+    color: white;
+  }
+  #first:hover{
+    /* border-radius: 50%; */
+    border: 1px;
+    background-color: white;
+    color: black;
+}
