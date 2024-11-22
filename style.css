@@ -7,8 +7,8 @@
   
   /* Body and Background */
   body {
-    background-color: black;
-    color: white;
+    background-color: var(--bg);
+    color: var(--text);
     overflow-x: hidden;
     overflow-y: scroll; /* Prevent horizontal scroll */
     scroll-behavior: smooth;
@@ -16,7 +16,19 @@
   
   /* CSS Variables */
   :root {
-    --colorOne: rgb(255, 215, 0);
+    color-scheme: light dark;
+            --span: light-dark(#e8e6e6, #4b4a4a);
+            --spanHover: light-dark(#c7c7c7, #888686);
+            --text: light-dark(#000000, #ffffff); /* done */
+            --bg: light-dark(#fffdfd, #000000); /* done */
+            --bgCard: light-dark(#fbfafa, #222222); /* done */
+            --icon: light-dark(#000000, #ffffff); /* done */
+            --iconHover: light-dark(#888686, #888686); /* done */
+            --shadowNav: light-dark(#121212, #ffffff1a); /* done */
+            --shadowCard: light-dark(#c9c9c9, #000000d3); /* done */
+            --shadowCardhover: light-dark(#5b5a5a, #c0babad3); /* done */
+            --bgFooter: light-dark(#f0f0f0, #222222); /* done */
+            --cardBody: light-dark(#000000, #ffffff); /* done */
   }
   
   /* Header */
@@ -26,6 +38,7 @@
     background-size: cover;
     background-position: center;
     margin-top: 0px;
+    color: white;
   }
   span1{
     background-color: black;
@@ -52,8 +65,8 @@
 
   /* Navigation */
   nav {
-    background-color: black;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    background-color: var(--bg);
+    box-shadow: 0 2px 5px var(--shadowNav);
     position: fixed;
     top: 0;
     width: 100%;
@@ -64,10 +77,10 @@
   /* Icon Styles */
   #icon {
     font-size: 20px;
-    color: white;
+    color: var(--icon);
   }
   #icon:hover{
-    color: #888686;
+    color: var(--iconHover);
   }
   .hand{
     font-family: "Lacquer", system-ui;
@@ -183,7 +196,7 @@
   font-style: normal;
   */
   span{
-    background-color: #4b4a4a;
+    background-color: var(--span);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 12px;
@@ -197,22 +210,25 @@
   transition: 0.5s;
   }
   span:hover{
-    background-color: #888686;
-    color: black;
+    background-color: var(--spanHover);
+    color: var(--text);
   }
   
   /* Card Styles */
   .card {
     margin: 20px;
-    background-color: #4b4a4a;
+    background-color: var(--bgCard);
+  }
+  .card-body{
+    color: var(--cardBody);
   }
   
   .card a i{
-    background-color: #4b4a4a;
+    background-color: var(--span);
     padding: 5px 10px;
     border-radius: 50px;
     font-size: 12px;
-    color: white;
+    color: var(--text);
     font-weight: bold;
     margin-top: 20px;
   }
@@ -225,12 +241,13 @@
   }
   
   .card {
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.44);
+    box-shadow: 0 2px 5px var(--shadowCard);
     margin: 10px;
     transition: 0.1s;
+    background-color: var(--bgCard);
   }
   .card:hover{
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.911);
+    box-shadow: 0 2px 5px var(--shadowCardhover);
   }
   
   @media (max-width: 768px) {
@@ -248,11 +265,6 @@
   footer{
     text-align: center; 
     padding: 20px; 
-    color: white;
+    color: var(--text);
+    background-color: var(--bgFooter);
   }
-  #first:hover{
-    /* border-radius: 50%; */
-    border: 1px;
-    background-color: white;
-    color: black;
-}
